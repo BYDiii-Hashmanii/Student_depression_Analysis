@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Depression Analysis</title>
+  <link rel="stylesheet" href="{{url_for('static', filename='pai_style.css')}}"/>
+
+
+</head>
+<body>
+
+  <h1>Student Depression Analysis Form</h1>
+
+  <form action="http://localhost:5000/input" method="POST">
+    <label for="id_val">ID:</label>
+    <input type="number" name="id_val" id="id_val" min="1" step="1" required>
+
+    <label for="gender">Gender:</label>
+    <select name="gender" id="gender">
+      <option value="0">Male</option>
+      <option value="1">Female</option>
+    </select>
+
+    <label for="age">Age:</label>
+    <input type="number" name="age" id="age" min="0" step="0.5" required>
+
+    <label for="academic_pressure">Academic Pressure:</label>
+    <input type="range" name="academic_pressure" id="academic_pressure" min="0" max="10" step="0.1">
+
+    <label for="work_pressure">Work Pressure:</label>
+    <input type="range" name="work_pressure" id="work_pressure" min="0" max="10" step="0.1">
+
+    <label for="cgpa">CGPA:</label>
+    <input type="number" name="cgpa" id="cgpa" min="0" max="10" step="0.01">
+
+    <label for="study_satisfaction">Study Satisfaction:</label>
+    <input type="range" name="study_satisfaction" id="study_satisfaction" min="0" max="10" step="0.1">
+
+    <label for="job_satisfaction">Job Satisfaction:</label>
+    <input type="range" name="job_satisfaction" id="job_satisfaction" min="0" max="10" step="0.1">
+
+    <label for="sleep_duration">Sleep Duration (hours):</label>
+    <input type="number" name="sleep_duration" id="sleep_duration" min="0" max="24" step="1">
+
+    <label for="dietary_habits">Dietary Habits:</label>
+    <select name="dietary_habits" id="dietary_habits">
+      <option value="0">Unhealthy</option>
+      <option value="1">Healthy</option>
+    </select>
+
+    <label for="suicidal_thoughts">Have you ever had suicidal thoughts?</label>
+    <select name="suicidal_thoughts" id="suicidal_thoughts">
+      <option value="0">No</option>
+      <option value="1">Yes</option>
+    </select>
+
+    <label for="work_study_hours">Work/Study Hours:</label>
+    <input type="number" name="work_study_hours" id="work_study_hours" min="0" step="0.5">
+
+    <label for="financial_stress">Financial Stress:</label>
+    <input type="range" name="financial_stress" id="financial_stress" min="0" max="10" step="0.1">
+
+    <label for="family_history">Family History of Mental Illness:</label>
+    <select name="family_history" id="family_history">
+      <option value="0">No</option>
+      <option value="1">Yes</option>
+    </select>
+
+    <button type="submit">Submit</button>
+  </form>
+
+</body>
+</html>

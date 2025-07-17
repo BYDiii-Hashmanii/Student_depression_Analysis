@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="result-container">
+        <h1>🎓 Student Mental Health Prediction</h1>
+        <div class="result-box">
+            <p>{{ result_message }}</p>
+        </div>
+        <a href="/" class="btn">Go Back to Form</a>
+    </div>
+</body>
+</html>
